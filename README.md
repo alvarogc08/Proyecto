@@ -50,8 +50,8 @@ Además, hay un tipo enumerado para los resultados, con los valores 'victoria', '
 **Constructores**: 
 
 - C1: Recibe como parámetros el nombre del rival, la fecha y hora del partido y el resultado.
-- C2: Rrecibe como parámetros el nombre del rival, si fue local o no, la audiencia, los goles del Madrid y los goles del rival, estos dos últimos siendo inicializados con 0.
-- ...
+- C2: Rrecibe como parámetros los mismos que C1 y además también la audiencia.
+
 
 **Restricciones**:
  

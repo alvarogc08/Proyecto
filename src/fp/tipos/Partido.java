@@ -21,7 +21,7 @@ public class Partido implements Comparable<Partido> {
 	//Contructor 1
 	public Partido(String rival,LocalDateTime fechaHora, Resultados resultado){
 		//Restricción 1
-		if (fechaHora.getYear()!=2021 || fechaHora.getYear()!=2022) {
+		if (!(fechaHora.getYear()==2021 || fechaHora.getYear()==2022)) {
 			throw new IllegalArgumentException("El partido no es de esta temporada");
 		}
 	
@@ -30,7 +30,7 @@ public class Partido implements Comparable<Partido> {
 		this.resultado=resultado;
 	}
 	//Constructor 2
-	public Partido(String rival , Boolean fueLocal, Integer golesMadrid, Integer golesRival,Double audiencia ) {
+	public Partido(String rival, LocalDateTime fechaHora, Resultados resultado, Double audiencia ) {
 		//Restricción 2
 		if (audiencia<0) {
 			throw new IllegalArgumentException ("La audiencia de un partido no puede ser negativa");
@@ -38,9 +38,8 @@ public class Partido implements Comparable<Partido> {
 		}
 		this.rival=rival;
 		this.audiencia=audiencia;
-		this.fueLocal=fueLocal;
-		this.golesMadrid=0;
-		this.golesRival=0;
+		this.fechaHora=fechaHora;
+		this.resultado=resultado;
 	}
 	//Propiedad derivada, que calcula la diferencia de goles en cada partido.
 	public Integer getDiferenciaGoles() {
