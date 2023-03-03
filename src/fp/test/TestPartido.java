@@ -1,15 +1,16 @@
 package fp.test;
 
-import fp.tipos.*;
+import fp.tipos.Partido;
 
 public class TestPartido {
 
 	public static void main(String[] args) {
-	
 		// TODO Auto-generated method stub
 		
-		Partido p2=new Partido("Barcelona", true, 85.6);
-		System.out.println(p2);
+		Partido p1=new Partido("Barcelona",true, 1, 0,3.8 );
+		System.out.println(p1);
+		
+		
 
 	}
 
